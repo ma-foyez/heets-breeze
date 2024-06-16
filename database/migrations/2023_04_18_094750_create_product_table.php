@@ -18,12 +18,12 @@ class CreateProductTable extends Migration
             $table->string('title');
             $table->longText('description');
             $table->string('image');
-            $table->string('regular_Price');
-            $table->string('offer_Price');
+            $table->decimal('regular_price', 10, 2);
+            $table->decimal('offer_price', 10, 2);
             $table->string('product_category');
             $table->string('product_sub_category')->nullable();
             $table->tinyInteger('order');
-            $table->tinyInteger('status')->default('1');
+            $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
     }

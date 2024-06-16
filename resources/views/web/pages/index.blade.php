@@ -4,6 +4,10 @@
 @include('web.component.hero')
 <!-- slider end here -->
 
+<!-- top brands start here -->
+@include('web.component.brands')
+<!-- top brands end here -->
+
 <!-- about start here -->
 @include('web.component.about')
 <!-- about end here -->

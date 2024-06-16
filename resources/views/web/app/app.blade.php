@@ -7,7 +7,24 @@
     </head>
 
     <body class="header4">
-        @include('web.inc.header')
+
+        
+ <!-- Preloader area start -->
+ <div class="loading">
+    <span class="text-capitalize">L</span>
+    <span>o</span>
+    <span>a</span>
+    <span>d</span>
+    <span>i</span>
+    <span>n</span>
+    <span>g</span>
+</div>
+
+<div id="preloader">
+</div>
+<!-- Preloader area end -->
+
+        {{-- @include('web.inc.header') --}}
 
         @yield('main-body')
 

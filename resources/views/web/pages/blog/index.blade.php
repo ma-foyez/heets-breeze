@@ -1,13 +1,11 @@
 @extends('web.app.app')
 @section('main-body')
-<div class="bread-crumb">
-    <img src="{{ asset('') }}assets/web/images/top-banner.jpg" class="img-fluid" alt="banner-top" title="banner-top">
-    <div class="container">
-        <div class="matter">
-            <h2><span>Blogs</span> </h2>
 
-        </div>
-    </div>
-</div>
+@include('web.inc.page-cover', [
+    'backgroundImage' => 'assets/web/images/about/inner-banner.jpg',
+    'pageTitle' => 'Blogs',
+    'breadcrumb' => 'Blogs',
+])
+
 @include('web.component.blog')
 @endsection

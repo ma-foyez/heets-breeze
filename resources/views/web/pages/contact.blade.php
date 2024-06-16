@@ -3,60 +3,67 @@
 
 @section('main-body')
 <!-- Page Title -->
-<div class="bread-crumb">
-    <img src="{{ asset('') }}assets/web/images/top-banner.jpg" class="img-fluid" alt="banner-top" title="banner-top">
-    <div class="container">
-        <div class="matter">
-            <h2><span>Contact Us</span> </h2>
 
-        </div>
-    </div>
-</div>
+@include('web.inc.page-cover', [
+    'backgroundImage' => 'assets/web/images/about/inner-banner.jpg',
+    'pageTitle' => 'Contact Us',
+    'breadcrumb' => 'Contact',
+])
+
 <!-- End Page Title -->
-<div class="contactus">
+<section class="contact pt-130 pb-130">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 commontop text-center">
-                <h4>
-                    <i class="icon_star_alt"></i>
-                    <i class="icon_star_alt"></i>
-                    <i class="icon_star_alt"></i>
-                    Contact us
-                    <i class="icon_star_alt"></i>
-                    <i class="icon_star_alt"></i>
-                    <i class="icon_star_alt"></i>
-                </h4>
-       
-            </div>
-
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="address">
-                <div class="row">
-                    <div class="col-md-4">
-                        <i class="icon_map_alt"></i>
-                        {{ $content->office_address }}
-                    </div>
-                    <div class="col-md-4">
-                        <i class="fa fa-envelope"></i>
-                        {{ $content->website_email }}
-                    </div>
-                    <div class="col-md-4">
-                        <i class="icon_mobile"></i>
-                        {{ $content->website_phone }}
-                    </div>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="content radius-10 bg-image">
+                    <h2>Have something in mind? <br>
+                        Let's talk.</h2>
+                    <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore <br> et dolore magna
+                        aliqua.
+                        Ut enim ad minim.</p>
+                    <div class="arry"><img src="assets/images/contact/arry.png" alt=""></div>
+                    <ul>
+                        <li>
+                            <a href="https://maps.app.goo.gl/46eFbjPsGpxtiKX66" target="_blank">
+                                <i class="fa-solid fa-location-dot"></i> {{ $content->office_address }} </a>
+                        </li>
+                        <li>
+                            <a href="tel:{{ $content->website_phone }}">
+                                <i class="fa-solid fa-phone-volume"></i>{{ $content->website_phone }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:{{ $content->website_email }}"><i class="fa-solid fa-envelope">
+                            </i> {{ $content->website_email }}</a></li>
+                    </ul>
                 </div>
-
+            </div>
+            <div class="col-lg-6">
+                <div class="form-area">
+                    <form action="#0">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                        <select name="subject" id="subject" style="display: none;">
+                            <option value="0">Select Subject</option>
+                            <option value="0">Account</option>
+                            <option value="0">Service</option>
+                            <option value="0">Pricing</option>
+                            <option value="0">Support</option>
+                        </select><div class="nice-select" tabindex="0"><span class="current">Select Subject</span><ul class="list"><li data-value="0" class="option selected focus">Select Subject</li><li data-value="0" class="option">Account</li><li data-value="0" class="option">Service</li><li data-value="0" class="option">Pricing</li><li data-value="0" class="option">Support</li></ul></div>
+                        <textarea name="Your Review" id="massage" placeholder="Message..."></textarea>
+                        <div class="radio-btn mt-2">
+                            <span></span>
+                            <p>I accept your terms &amp; conditions</p>
+                        </div>
+                        <button class="mt-40 btn-one"><span>Submit Now</span></button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
 <div class="map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.576728425693!2d90.38286427528378!3d23.869159578589496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c41a98002459%3A0xddd1a4f2cc9f9ea6!2s1230%20Gausul%20Azam%20Ave%2C%20Dhaka%201230!5e0!3m2!1sen!2sbd!4v1692684587754!5m2!1sen!2sbd"></iframe>
+    <iframe class="d-block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14444.656910712387!2d55.409975!3d25.163932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f614eb88deb71%3A0x1639bd9727e18e15!2sDubai%20International%20City%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sbd!4v1718523772274!5m2!1sen!2sbd" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 @endsection
