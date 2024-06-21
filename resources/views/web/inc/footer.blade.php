@@ -79,26 +79,26 @@
                         <hr>
            
                         <div class="social-icon mt-40">
-                            {{-- what's app  --}}
+                            {{-- WhatsApp --}}
                             @if (!empty($content->whatsapp_number))
                             @php
                                 $whatsappNumber = str_replace([' ', '-', '+'], '', $content->whatsapp_number); // Remove spaces, dashes, and plus signs
-                                $whatsappMessage = urlencode('Hello! I am interested in your products.'); // Default message text
-                                $whatsappUrl = "https://wa.me/{$whatsappNumber}";
+                                $whatsappMessage = urlencode("Hello! I am interested in discussing business with you."); // Default message text
+                                $whatsappUrl = 'https://wa.me/' . $whatsappNumber . '?text=' . $whatsappMessage;
                             @endphp
                             <a href="{{ $whatsappUrl }}" target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i>
                             </a>
-                             @endif
+                            @endif
                             {{-- <a href="{{ $content->whatsapp }}" target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i>
                             </a> --}}
                              {{-- Instagam  --}}
-                            <a href="{{ $content->facebook }}" target="_blank">
+                            <a href="{{ $content->instagram_page }}" target="_blank">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                               {{-- Facebook  --}}
-                            <a href="{{ $content->facebook }}" target="_blank">
+                            <a href="{{ $content->facebook_page }}" target="_blank">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
                         

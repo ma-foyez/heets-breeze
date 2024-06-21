@@ -16,7 +16,7 @@ class CategorySeeder extends Seeder
     {
         $categories = [
             ['title' => 'Iqos', 'status' => '1', 'order' => '1'],
-            ['title' => 'HEATS', 'status' => '1', 'order' => '2'],
+            ['title' => 'HEETS', 'status' => '1', 'order' => '2'],
         ];
 
         Category::insert($categories);

@@ -50,6 +50,8 @@ class ProductController extends Controller
         $data = $request->validate([
             'title' => 'required',
             'description' => 'required',
+            'offer_price' => 'required',
+            'regular_price' => 'required',
             'product_category' => 'required',
             'product_sub_category' => 'nullable',
             'image' => 'required|image|max:2048', // max file size of 2MB
@@ -113,6 +115,8 @@ class ProductController extends Controller
         $data = $request->validate([
             'title' => 'required',
             'order' => 'required',
+            'offer_price' => 'required',
+            'regular_price' => 'required',
             'product_category' => 'required',
             'description' => 'required',
             'product_sub_category' => 'nullable',

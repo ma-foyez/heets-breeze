@@ -62,12 +62,18 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="product_sub_category" class="form-label">Product Sub Category :</label>
-                                        <select id="product_sub_category" name="product_sub_category" class="form-select">
-
-
-
-                                        </select>
+                                        <select id="product_sub_category" name="product_sub_category" class="form-select"> </select>
                                     </div>
+
+                                    <div class="col-md-6">
+                                        <label for="regular_price" class="form-label">Regular Price</label>
+                                        <input type="text" class="form-control" id="regular_price" name="regular_price" required value="{{ $product->regular_price }}">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="offer_price" class="form-label">Offer Price</label>
+                                        <input type="text" class="form-control" id="offer_price" name="offer_price" required value="{{ $product->offer_price }}">
+                                    </div>
+                                    
                                     <div class="col-md-6">
                                         <label for="description" class="form-label">Description</label>
                                         <textarea class="form-control" id="summernote" name="description" rows="10">

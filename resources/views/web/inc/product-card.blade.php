@@ -1,14 +1,22 @@
+@php
+    // Assuming $content->whatsapp_number contains the WhatsApp number
+    $whatsappNumber = str_replace([' ', '-', '+'], '', $content->whatsapp_number); // Remove spaces, dashes, and plus signs
+    $productUrl = route('product.details', $product->id);
+    $whatsappMessage = urlencode("Hello! I'm interested to purchasing {$product->title}.\nHere is the link: {$productUrl}");
+    $whatsappUrl = 'https://wa.me/' . $whatsappNumber . '?text=' . $whatsappMessage;
+@endphp
+
 <div class="product__item bor">
     <a href="#0" class="wishlist"><i class="fa-regular fa-heart"></i></a>
-    <a href="{{ route('product.details',$product->id) }}" class="product__image pt-20 d-block">
+    <a href="{{ $productUrl }}" class="product__image pt-20 d-block">
         <img class="font-image" src="{{ asset('') }}uploads/products/{{ $product->image }}"
             alt="{{ $product->title }}">
         <img class="back-image" src="{{ asset('') }}uploads/products/{{ $product->image }}"
             alt="{{ $product->title }}">
     </a>
     <div class="product__content">
-        <h4 class="mb-15"><a class="primary-hover" href="{{ route('product.details',$product->id) }}"> {{ $product->title }} </a></h4>
-        <del>Dhs. {{ $product->regular_price }}</del><span class="primary-color ml-10">Dhs. {{ $product->offer_price }}</span>
+        <h4 class="mb-15"><a class="primary-hover" href="{{ $productUrl }}"> {{ $product->title }} </a></h4>
+        <del>AED {{ $product->regular_price }}</del><span class="primary-color ml-10">Dhs. {{ $product->offer_price }}</span>
         <div class="star mt-20">
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
@@ -18,8 +26,9 @@
         </div>
 
     </div>
-    <a class="product__cart d-block bor-top" href="#0"><i
+
+
+    <a href="{{ $whatsappUrl }}" target="_blank" class="product__cart d-block bor-top"><i
             class="fa-regular fa-cart-shopping primary-color me-1"></i>
-        <span>Add to
-            cart</span></a>
+        <span>Buy Now</span></a>
 </div>
