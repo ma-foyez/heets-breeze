@@ -5,5 +5,5 @@
     'pageTitle' => 'Products',
     'breadcrumb' => 'Products',
 ])
-@include('web.component.product')
+@include('web.component.product-page')
 @endsection
