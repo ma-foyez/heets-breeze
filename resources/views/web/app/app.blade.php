@@ -24,7 +24,7 @@
 </div>
 <!-- Preloader area end -->
 
-        {{-- @include('web.inc.header') --}}
+        @include('web.inc.header')
 
         @yield('main-body')
 

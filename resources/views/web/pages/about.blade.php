@@ -23,8 +23,8 @@
                                 <img src="{{ asset('') }}assets/web/images/icon/feature-icon1.png" alt="icon">
                             </div>
                             <div class="service__content">
-                                <h4>Free delivery</h4>
-                                <p>For all orders above $45</p>
+                                <h5>Free Shipping</h5>
+                                <p>Enjoy free shipping on all orders worldwide.</p>
                             </div>
                         </div>
                         <div class="service__item">
@@ -32,8 +32,8 @@
                                 <img src="{{ asset('') }}assets/web/images/icon/feature-icon2.png" alt="icon">
                             </div>
                             <div class="service__content">
-                                <h4>Secure payments</h4>
-                                <p>Confidence on all your devices</p>
+                                <h5>Cash on Delivery</h5>
+                                <p>Pay with cash upon delivery for added convenience.</p>
                             </div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                             <img src="{{ asset('') }}assets/web/images/icon/service-image.png" alt="image">
                             <div class="section-header service-header d-flex align-items-center">
                                 <span class="title-icon mr-10"></span>
-                                <h2>sign up & save 25%</h2>
+                                <h2>Order now & save 25%</h2>
                             </div>
                         </div>
                     </div>
@@ -52,8 +52,8 @@
                                 <img src="{{ asset('') }}assets/web/images/icon/feature-icon3.png" alt="icon">
                             </div>
                             <div class="service__content">
-                                <h4>Top-notch support</h4>
-                                <p>sayhello&gazacom</p>
+                                <h5>24/7 Support</h5>
+                                <p>Contact us anytime at   <a href="mailto:{{ $content->website_email }}"> {{ $content->website_email }} </a> </p>
                             </div>
                         </div>
                         <div class="service__item">
@@ -61,8 +61,8 @@
                                 <img src="{{ asset('') }}assets/web/images/icon/feature-icon4.png" alt="icon">
                             </div>
                             <div class="service__content">
-                                <h4>180 Days Return</h4>
-                                <p>money back guranry</p>
+                                <h5> Return Policy</h5>
+                                <p>Money-back guarantee if product is damaged. Please inform us within 24 hours.</p>
                             </div>
                         </div>
                     </div>

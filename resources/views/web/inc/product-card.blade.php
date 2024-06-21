@@ -16,7 +16,7 @@
     </a>
     <div class="product__content">
         <h4 class="mb-15"><a class="primary-hover" href="{{ $productUrl }}"> {{ $product->title }} </a></h4>
-        <del>AED {{ $product->regular_price }}</del><span class="primary-color ml-10">Dhs. {{ $product->offer_price }}</span>
+        <del>AED {{ $product->regular_price }}</del><span class="primary-color ml-10">AED {{ $product->offer_price }}</span>
         <div class="star mt-20">
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>

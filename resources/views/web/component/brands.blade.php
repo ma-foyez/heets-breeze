@@ -1,7 +1,7 @@
   <!-- Category area start here -->
   <section class="category-area category-two pb-130 pt-130">
     <div class="container">
-        <div class="bor-bottom pb-130">
+        <div class="pb-70">
             <div class="sub-title text-center mb-65 wow fadeInUp" data-wow-delay=".1s">
                 <h3><span class="title-icon"></span> our top categories <span class="title-icon"></span>
                 </h3>

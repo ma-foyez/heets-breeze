@@ -1,6 +1,6 @@
 <footer class="footer-area bg-image" data-background="{{ asset('assets/web/images/footer/footer-bg.jpg') }}">
     <div class="container">
-        <div class="footer__wrp pt-65 pb-65 bor-top bor-bottom">
+        <div class="footer__wrp pt-65 pb-65 bor-top">
             <div class="row g-4">
                 <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".1s">
                     <div class="footer__item">
@@ -107,16 +107,19 @@
                 </div>
             </div>
         </div>
-        <div class="footer__copy-text pt-50 pb-50">
-            <a href="index.html" class="logo d-block">
+        <div class="footer__copy-text pb-3">
+            <p class="text-center">&copy; Copyright {{ date('Y') }} <a href="#0" class="primary-hover"> {{ $content->website_name }}</a> All Rights Reserved</p>
+        </div>
+        {{-- <div class="footer__copy-text pt-50 pb-50">
+            <a href="{{ route('index') }}" class="logo d-block">
                 <img src="{{asset('')}}uploads/content/{{ $content->website_logo }}" class="img-fluid" title="logo"
                 alt="logo">
             </a>
-            <p>&copy; Copyright 2023 <a href="#0" class="primary-hover">odor</a> All Rights Reserved</p>
+            <p>&copy; Copyright {{ date('Y') }} <a href="#0" class="primary-hover"> {{ $content->website_name }}</a> All Rights Reserved</p>
             <a href="#0" class="payment d-block image">
                 <img src="{{ asset('assets/web/images/icon/payment.png') }}" alt="icon">
             </a>
-        </div>
+        </div> --}}
     </div>
 </footer>
 

@@ -8,18 +8,14 @@
 @include('web.component.brands')
 <!-- top brands end here -->
 
-<!-- about start here -->
-@include('web.component.about')
-<!-- about end here -->
-
-
-
 
 <!-- product start here -->
 @include('web.component.product')
 <!-- product end here -->
 
-
+<!-- about start here -->
+@include('web.component.about')
+<!-- about end here -->
 
 <!-- blog start here -->
 {{-- @include('web.component.blog') --}}

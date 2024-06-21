@@ -3,6 +3,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+<link rel="icon" href="{{ asset('uploads/content/' . $content->website_favicon) }}" type="image/x-icon">
+
  <!-- Bootstarp min css -->
  <link rel="stylesheet" href="{{ asset('') }}assets/web/styles/bootstrap.min.css">
  <!-- All min css -->

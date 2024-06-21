@@ -106,15 +106,16 @@
             </div>
             <ul class="nav nav-pills mt-4 mt-xl-0">
                 <li class="nav-item wow fadeInUp" data-wow-delay=".1s">
-                    <a href="#all-items" data-bs-toggle="tab" class="nav-link px-4 active">
+                    <a href="#all-items" data-bs-toggle="tab" class="nav-link px-4 {{ request()->is('path/to/category/page') ? 'active' : '' }}">
                         All
                     </a>
                 </li>
-                @foreach ($categories as $category)
+                @foreach ($categories as $cat)
                 <li class="nav-item wow fadeInUp" data-wow-delay=".2s">
-                    <a href="#{{ $category->id }}-tab-pane" data-bs-toggle="tab" class="nav-link px-4 bor-left bor-right">
-                        {{ $category->title }}
+                    <a href="#{{ $cat->id }}-tab-pane" data-bs-toggle="tab" class="nav-link px-4 bor-left bor-right {{ $cat->id == $category->id ? 'active' : '' }}">
+                        {{ $cat->title }}
                     </a>
+                </li>
                 @endforeach
             </ul>
         </div>
